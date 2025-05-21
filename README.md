@@ -1,56 +1,99 @@
-Proyek Analisis Penjualan E-commerce ✨
-Dashboard interaktif ini dibuat untuk menganalisis data penjualan e-commerce dari Olist. Semua sudah disesuaikan agar mudah dijalankan di Visual Studio Code.
+# 📊 Proyek Analisis Penjualan ✨
 
-Setup Environment (VS Code)
-Ikuti langkah-langkah di bawah ini untuk menyiapkan dan menjalankan proyek di VS Code Anda.
+Dashboard interaktif ini dibuat untuk menganalisis data penjualan e-commerce. Dirancang agar mudah dijalankan di **Visual Studio Code** dengan **Python** dan **Streamlit**.
 
-1. Kloning Repositori
-Buka Terminal di VS Code (bisa lewat Terminal > New Terminal atau pintasan Ctrl+Shift+ `), lalu klonalah repositori Anda:
+---
 
+## 🔧 Setup Environment (VS Code)
+
+Ikuti langkah-langkah berikut untuk menyiapkan dan menjalankan proyek ini secara lokal di VS Code.
+
+### 1. Kloning Repositori
+
+Buka terminal di VS Code (Terminal > New Terminal atau `Ctrl + Shift + ``), lalu jalankan:
+
+```bash
 git clone https://github.com/08samudra/analisis_data_penjualan.git
+````
 
-Setelah kloning selesai, buka folder proyek di VS Code: klik File > Open Folder... dan pilih folder analisis_data_penjualan yang baru Anda kloning.
+Buka folder proyek:
 
-2. Buat dan Aktifkan Virtual Environment
-Di terminal VS Code yang sudah terbuka (pastikan Anda berada di direktori analisis_data_penjualan/), buat virtual environment:
+```bash
+cd analisis_data_penjualan
+```
 
+---
+
+### 2. Buat dan Aktifkan Virtual Environment
+
+**Windows (PowerShell):**
+
+```bash
 python -m venv .venv
-
-Aktifkan virtual environment Anda di terminal VS Code:
-
-Windows (PowerShell di VS Code):
-
 .venv\Scripts\activate
+```
 
-(Jika Anda mengalami masalah Execution Policy, jalankan PowerShell sebagai Administrator di luar VS Code, lalu ketik Set-ExecutionPolicy RemoteSigned, dan konfirmasi dengan Y. Setelah itu, tutup PowerShell Administrator dan coba lagi aktivasi di terminal VS Code.)
+Jika muncul masalah terkait *Execution Policy*, jalankan PowerShell sebagai Administrator lalu ketik:
 
-macOS / Linux (Bash di VS Code):
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
 
+Lalu tekan `Y`, dan coba aktivasi ulang.
+
+**macOS / Linux:**
+
+```bash
+python3 -m venv .venv
 source .venv/bin/activate
+```
 
-(Anda akan melihat (.venv) di awal prompt terminal Anda, menandakan virtual environment sudah aktif.)
+> Setelah aktivasi berhasil, terminal Anda akan menampilkan `(.venv)` di awal baris.
 
-3. Instal Dependensi
-Dengan virtual environment yang aktif di terminal VS Code, instal semua library yang diperlukan:
+---
 
+### 3. Instal Dependensi
+
+Pastikan virtual environment sudah aktif, lalu jalankan:
+
+```bash
 pip install pandas matplotlib seaborn streamlit
+```
 
-4. Siapkan Data Gabungan (all_data.csv)
-Dari terminal VS Code (pastikan virtual environment masih aktif dan Anda berada di direktori analisis_data_penjualan/), jalankan skrip penggabungan data:
+---
 
+### 4. Siapkan Data Gabungan (`all_data.csv`)
+
+Di direktori utama proyek, jalankan skrip berikut:
+
+```bash
 python create_all_data.py
+```
 
-Skrip ini akan membuat file all_data.csv langsung di dalam folder dashboard/ proyek Anda.
+File `all_data.csv` akan otomatis dibuat di dalam folder `dashboard/`.
 
-Run Streamlit App
-Setelah all_data.csv selesai dibuat (di dalam folder dashboard/), navigasi ke folder dashboard/ di terminal VS Code yang sama:
+---
 
+## 🚀 Jalankan Aplikasi Streamlit
+
+Pindah ke direktori `dashboard/`:
+
+```bash
 cd dashboard
+```
 
-Kemudian, jalankan aplikasi Streamlit:
+Jalankan aplikasi:
 
+```bash
 streamlit run main.py
+```
 
-Dashboard akan otomatis terbuka di browser web Anda (biasanya di http://localhost:8501).
+Aplikasi akan terbuka di browser pada alamat: [http://localhost:8501](http://localhost:8501)
 
-Selamat! Dashboard Anda kini sudah berjalan. Anda bisa menggunakan input angka di sidebar untuk menyesuaikan ambang batas persentase dan melihat analisis data secara interaktif.
+---
+
+## ✅ Fitur Interaktif
+
+* Input angka di sidebar untuk menyesuaikan **ambang batas persentase**
+* Visualisasi data penjualan secara **interaktif**
+---
