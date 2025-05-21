@@ -96,4 +96,5 @@ Aplikasi akan terbuka di browser pada alamat: [http://localhost:8501](http://loc
 
 * Input angka di sidebar untuk menyesuaikan **ambang batas persentase**
 * Visualisasi data penjualan secara **interaktif**
+* Nama data produk sudah diterjemahkan ke dalam bahasa Inggris
 ---
